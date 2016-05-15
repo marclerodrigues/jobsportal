@@ -6,6 +6,7 @@ RSpec.describe Candidate, type: :model do
 
   it { is_expected.to validate_presence_of(:first_name) }
   it { is_expected.to validate_presence_of(:last_name) }
+  it { is_expected.to have_one(:address)}
   it { is_expected.to have_many(:skills)}
 
   it 'has a valid factory' do
