@@ -1,3 +1,3 @@
 class Company < ActiveRecord::Base
-  validates :name, :about, presence: :true
+  validates :name, :about, :presence => true
 end
