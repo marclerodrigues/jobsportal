@@ -52,9 +52,7 @@ guard 'zeus' do
   watch(rails.views_n_layouts) { |m| rspec.spec.call(m[1]) }
   watch(rails.controllers) do |m|
     [
-      rspec.spec.call("routing/#{m[1]}_routing"),
       rspec.spec.call("controllers/#{m[1]}_controller"),
-      rspec.spec.call("acceptance/#{m[1]}")
     ]
   end
 
