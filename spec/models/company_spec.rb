@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Company, type: :model do
 
-  let(:company) { FactoryGirl.create(:company)}
+  let(:company) { FactoryGirl.build(:company)}
 
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:about) }
@@ -10,5 +10,5 @@ RSpec.describe Company, type: :model do
   it 'has a valid factory' do
     expect(company).to be_valid
   end
-  
+
 end
