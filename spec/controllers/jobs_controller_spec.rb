@@ -121,6 +121,7 @@ RSpec.describe JobsController, type: :controller do
 
     it 'assigns the correct job to @job' do
       delete :destroy, id: @job
+      expect(assigns(:job)).to eq(@job)
     end
 
     it 'deletes the job' do
