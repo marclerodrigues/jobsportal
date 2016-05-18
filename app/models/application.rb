@@ -26,14 +26,14 @@ class Application < ActiveRecord::Base
       total = skills_that_matter.merge(requirements_that_matter) do |key, old_val, new_val|
         old_val / new_val
       end
+
       total = (total.map(&:last).reduce(:+) / requirements.count.to_f)
 
-      if total >= 1
-        total = 1
+      if total >= 1.0
+        total = 100
       else
-        total
+        total *= 100
       end
-      total*100
     end
   end
 

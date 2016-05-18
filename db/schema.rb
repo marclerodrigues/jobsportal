@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518001654) do
+ActiveRecord::Schema.define(version: 20160518011435) do
 
   create_table "addresses", force: :cascade do |t|
     t.text     "street"
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20160518001654) do
     t.integer  "candidate_id"
     t.integer  "job_id"
     t.integer  "company_id"
-    t.float    "candidate_match"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.decimal  "match"
   end
 
   add_index "applications", ["candidate_id"], name: "index_applications_on_candidate_id"

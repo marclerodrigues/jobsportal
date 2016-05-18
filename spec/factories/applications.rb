@@ -3,6 +3,6 @@ FactoryGirl.define do
     candidate nil
     job nil
     company nil
-    candidate_match 1.5
+    match 1.0
   end
 end
