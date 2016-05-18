@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515170935) do
+ActiveRecord::Schema.define(version: 20160518001654) do
 
   create_table "addresses", force: :cascade do |t|
     t.text     "street"
@@ -77,10 +77,10 @@ ActiveRecord::Schema.define(version: 20160515170935) do
 
   create_table "skills", force: :cascade do |t|
     t.text     "title"
-    t.integer  "years"
     t.integer  "candidate_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.decimal  "years"
   end
 
   add_index "skills", ["candidate_id"], name: "index_skills_on_candidate_id"
